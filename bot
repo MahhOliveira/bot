@@ -1,0 +1,88 @@
+TimeOut da turma:
+users_dict = {}
+
+def time_user(self, uid, end: int = 5):
+Se o uid não estiver em self.users_dict.keys():
+self.users_dict[uid] = {"start": 0, "end": fim}
+Thread(target=self.timer, args=[uid]).start()
+
+Def Timer(Self, UID):
+enquanto self.users_dict[uid]["start"] <= self.users_dict[uid]["end"]:
+self.users_dict[uid]["start"] += 1
+Slp(1)
+del self.users_dict[uid]
+
+def timed_out(self, uid):
+se uid em self.users_dict.keys():
+return self.users_dict[uid]["start"] >= self.users_dict[uid]["end"]
+retorno True
+
+
+classe BannedWords:
+def filtre_message(self, mensagem, código):
+para = normalize('NFD', message).encode(code, 'ignore').decode("utf8").strip().lower()
+        para = para.translate(str.maketrans("", "", punctuation))
+voltar para
+
+def check_banned_words(self, args):
+para palavra em ("ascii", "utf8"):
+com suppress(Exception):
+para = self.filtre_message(args.message, palavra).split()
+se para != [""]:
+com suppress(Exception):
+[args.subClient.delete_message(args.chatId, args.messageId, reason=f"Palavra proibida : {elem}", asStaff=True) para elem in para if elem in args.subClient.banned_words]
+da saída de importação do sistema
+de dumps de importação JSON, carga, cargas
+do caminho de importação pathlib
+de threading import Thread
+de contextlib import suppress
+de importação unicodedata normalizar
+da pontuação de importação de cadeia de caracteres
+da escolha de importação aleatória
+de datetime importação datetime
+tentar:
+de ******** importar Cliente, SubCliente, ACM
+exceto ImportError:
+de ********* importar Cliente, SubCliente, ACM
+de uuid import uuid4
+De inspecionar importação GetFullArgSpec
+de urllib.request import urlopen
+de zipfile import ZipFile
+solicitações de importação
+
+
+path_utilities = "utilitários"
+path_****** = f'{path_utilities}/amino_list'
+path_client = "client_txt"
+NoneType = tipo(Nenhum)
+
+
+
+com suppress(Exception):
+Para i em (path_utilities, path_amino):
+Path(i).mkdir(exist_ok=Verdadeiro)
+
+def print_exception(exc):
+impressão(repr(exc))
+
+classe Comando:
+def __init__(self):
+self.commands = {}
+auto.condições = {}
+passar
+
+
+
+def execute(self, commande, data, type: str = "command"):
+com = self.commands[type][commande]
+arg = getfullargspec(com).args
+arg.pop(0)
+s = len(arg)
+disco = {}
+se s:
+disco = {key: valor para chave, valor em zip(arg, data.message.split()[0:s])}
+
+if self.conditions[type].get(commande, Nenhum):
+if self.conditions[type][commande](data):
+Return Self.Commands[type][commande](data, **dico)
+retornar
